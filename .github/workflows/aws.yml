@@ -30,7 +30,7 @@ jobs:
 
     - name: Debug secrets
       run: |
-        echo "Key exists: ${{ secrets.AWS_ACCESS_KEY_ID != '' }}"
+        echo "Key exists: ${{  secrets.DOCKERHUB_USERNAME }} != '' }}"
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
