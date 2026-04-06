@@ -5,7 +5,7 @@ on:
     branches: [ "master" ]
 
 env:
-  AWS_REGION: "eu-west-1"                 # set this to your preferred AWS region, e.g. us-west-1 dd
+  AWS_REGION: "eu-west-1"                 # set this to your preferred AWS region, e.g. us-west-1
   ECR_REPOSITORY: "dev/gestion-commande"           # set this to your Amazon ECR repository name
   ECS_SERVICE: "gestion-commande-def-family-service"                # set this to your Amazon ECS service name
   ECS_CLUSTER: "gestion-commande"                # set this to your Amazon ECS cluster name
@@ -21,6 +21,7 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
     - name: Checkout
