@@ -18,6 +18,11 @@ permissions:
   contents: read
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "ACCESS: ${{ secrets.AWS_ACCESS_KEY_ID }}"
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
