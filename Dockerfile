@@ -24,7 +24,7 @@ WORKDIR /app
 COPY --from=build /build/target/TestEcsAws-0.0.1-SNAPSHOT.jar app.jar
 
 # Configuration pour ECS
-EXPOSE 8081
+EXPOSE 80
 
 # Commande optimisée pour la production
 ENTRYPOINT ["java", "-jar", "app.jar"]
